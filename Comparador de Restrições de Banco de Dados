@@ -1,0 +1,30 @@
+#Como um usuário do sistema, preciso de um processo automatizado para comparar as restrições estruturais (por exemplo, chaves primárias, restrições db_standard, restrições exclusivas) da Tabela entre os bancos de dados db_standard e db_cloneds. O sistema deve identificar discrepâncias nas definições de restrição e tomar as medidas apropriadas para garantir a consistência nas restrições entre os bancos de dados.
+""" Oque são as restrições de banco de dados?
+ Restrições de banco de dados são regras que são aplicadas a colunas individuais ou a uma tabela inteira. Essas regras ajudam a manter a precisão e a integridade dos dados do banco de dados. As restrições de banco de dados ajudam a garantir que apenas dados corretos sejam inseridos no banco de dados. """
+
+
+#O processo deve inserir automaticamente dados relevantes nas tabelas CLIENTE, CRONOGRAMA, EXECUÇÃO, DESCOBERTA, CENÁRIO, MODELO_db_standard, MODELO_db_cloned e LOG_DETALHE com base nos resultados das comparações. Isso garantirá que os resultados das comparações de restrição sejam registrados e acionáveis ​​dentro do sistema MasterCheck.
+""" Oque é o MasterCheck? 
+ O MasterCheck é um sistema de gerenciamento de banco de dados que permite que os usuários gerenciem e monitorem os bancos de dados de seus clientes. Ele permite que os usuários monitorem o desempenho do banco de dados, gerenciem o espaço de armazenamento e o acesso ao banco de dados. """
+
+# Função de comparação parametrizável para restrições em nível de tabela de objeto
+'Script_1: A Tabela tb_people possui uma chave primária no Banco de Dados db_standard, mas não no Banco de Dados db_cloned
+    Solução: Crie a chave primária ausente na Tabela tb_people no Banco de Dados db_cloned para corresponder ao Banco de Dados db_standard.'
+Script_2: A Tabela tb_people possui restrições db_standard no Banco de Dados db_standard, mas não no Banco de Dados db_cloned
+    Solução: Modifique a Tabela tb_people no Banco de Dados db_cloned para adicionar a restrição ausente, presente no Banco de Dados db_standard.
+'Script_3: A Tabela tb_people possui uma chave primária no Banco de Dados db_cloned, mas não no Banco de Dados db_standard
+    Solução: Exclua a chave primária na Tabela tb_people no Banco de Dados db_cloned que não existe no Banco de Dados db_standard.'
+Script_4: A Tabela tb_people possui uma chave primária em ambos os bancos de dados, mas com diferenças
+    Solução: Modifique a definição da chave primária na Tabela tb_people no Banco de Dados db_cloned para corresponder à definição na Tabela tb_people no Banco de Dados db_standard.
+# Função de comparação parametrizável para restrições em nível de coluna de objeto
+'Script_5: A Tabela tb_people possui restrições exclusivas no Banco de Dados db_standard, mas não no Banco de Dados db_cloned
+    Solução: Modifique a Tabela tb_people no Banco de Dados db_cloned para adicionar a restrição exclusiva ausente do Banco de Dados db_standard.'
+Script_6: A Tabela tb_people possui restrições exclusivas no Banco de Dados db_cloned, mas não no Banco de Dados db_standard
+    Solução: Modifique a Tabela tb_people no Banco de Dados db_cloned para excluir a restrição exclusiva extra não presente no Banco de Dados db_standard.
+'Script_7: A Tabela tb_people possui restrições exclusivas em ambos os bancos de dados, mas com diferenças
+    Solução: Modifique a Tabela tb_people no Banco de Dados db_cloned para adaptar a restrição exclusiva para corresponder à Tabela tb_people no Banco de Dados db_standard.'
+Script_8: A Tabela tb_people possui restrições db_standard no Banco de Dados db_cloned, mas não no Banco de Dados db_standard
+    Solução: Modifique a Tabela tb_people no Banco de Dados db_cloned para excluir a restrição extra não presente no Banco de Dados db_standard.
+'Script_9: A Tabela tb_people possui restrições db_standard em ambos os bancos de dados, mas com diferenças nos valores db_standard
+    Solução: Modifique a Tabela tb_people no Banco de Dados db_cloned para adaptar os valores de restrição db_standard para corresponder à Tabela tb_people no Banco de dados db_standard.'
+

@@ -1,0 +1,30 @@
+Aqui está uma síntese aprimorada da sua solicitação:
+
+Objetivo do Projeto: Desenvolver um sistema automatizado em um ambiente de banco de dados SQL Server Menagement Studio, para comparar e sincronizar as restrições estruturais (chaves primárias, restrições padrão, restrições exclusivas) entre os bancos de dados Padrão e Clonados. O sistema deve identificar e resolver discrepâncias, garantindo a consistência das restrições entre os bancos de dadoS.
+
+Funcionalidades Principais:
+
+1. Comparação de Restrições em Nível de Tabela de Objeto O sistema deve ser capaz de comparar as restrições em nível de tabela entre os bancos de dados Padrão e Clonado. Isso inclui a verificação da presença e definição de chaves primárias e restrições padrão. O sistema deve ser capaz de criar, modificar ou excluir chaves primárias e restrições padrão conforme necessário para garantir a consistência entre os bancos de dados.
+
+2. Comparação de Restrições em Nível de Coluna de Objeto O sistema deve ser capaz de comparar as restrições em nível de coluna entre os bancos de dados Padrão e Clonado. Isso inclui a verificação da presença e definição de restrições exclusivas e restrições padrão. O sistema deve ser capaz de adicionar, modificar ou remover restrições exclusivas e padrão conforme necessário para garantir a consistência entre os bancos de dados.
+
+Registro de Resultados: O sistema deve registrar automaticamente os resultados das comparações de restrição em tabelas relevantes dentro do sistema MasterCheck. Isso permitirá que os resultados sejam facilmente acessíveis e acionáveis.
+
+
+#Script 1 - Configuração do Banco de Dados: Este script deve estabelecer a conexão com os bancos de dados Padrão e Clonado.
+
+Script 2 - Extração de Restrições de Tabela: Este script deve extrair as restrições da tabela do banco de dados Padrão e Clonado.
+
+Script 3 - Comparação de Chaves Primárias: Este script deve comparar as chaves primárias entre os bancos de dados e identificar as discrepâncias.
+
+Script 4 - Sincronização de Chaves Primárias: Este script deve resolver as discrepâncias de chaves primárias identificadas pelo script 3.
+
+Script 5 - Comparação de Restrições Padrão: Este script deve comparar as restrições padrão entre os bancos de dados e identificar as discrepâncias.
+
+Script 6 - Sincronização de Restrições Padrão: Este script deve resolver as discrepâncias de restrições padrão identificadas pelo script 5.
+
+Script 7 - Comparação de Restrições Exclusivas: Este script deve comparar as restrições exclusivas entre os bancos de dados e identificar as discrepâncias.
+
+Script 8 - Sincronização de Restrições Exclusivas: Este script deve resolver as discrepâncias de restrições exclusivas identificadas pelo script 7.
+
+Script 9 - Registro de Resultados: Este script deve registrar os resultados das comparações de restrição nas tabelas relevantes dentro do sistema MasterCheck
